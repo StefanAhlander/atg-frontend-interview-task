@@ -1,11 +1,11 @@
 import React from 'react';
-import './Races.css';
+import './Results.css';
 
-import Race from '../Race/Race';
+import RaceResult from '../RaceResult/RaceResult';
 
 import { useFetch } from '../../hooks/useFetch';
 
-const Races = ({ gameId }) => {
+const Results = ({ gameId }) => {
   let races;
 
   const { response, error, isLoading } = useFetch(
@@ -15,13 +15,12 @@ const Races = ({ gameId }) => {
   if (response) {
     races = response.races;
   }
-
   return (
     <>
       {isLoading && <h3>Loading...</h3>}
       <div className="Races">
         {races && races.length > 0 && races.map(race => (
-          <Race key={race.id} {...race} />
+          <RaceResult key={race.id} {...race} />
         ))}
       </div>
       <div className="Error">
@@ -31,4 +30,4 @@ const Races = ({ gameId }) => {
   );
 };
 
-export default Races;
+export default Results;

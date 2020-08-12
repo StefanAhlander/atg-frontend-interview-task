@@ -1,0 +1,29 @@
+.RaceResults {
+  width: 100%;
+  max-width: 400px;
+  margin: 0.5rem auto;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 0;
+}
+
+.RaceResults h3 {
+  background-color: lightblue;
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
+.RaceResults p {
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.RaceResults p {
+  font-weight: bold;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.RaceResults p:nth-child(odd) {
+  background-color: rgb(211, 233, 240);
+}

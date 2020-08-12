@@ -1,1 +1,18 @@
-.Search {}
+.Search {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.Search h1, .Search h2, .Search h3 {
+  margin: 0.5rem auto;
+}
+
+.Search form {
+  font-size: 1.5rem;;
+}
+
+.Search form select {
+  font-size: 1.5rem;;
+}
+
