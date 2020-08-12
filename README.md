@@ -11,6 +11,8 @@ but I wanted to stick to finishing as soon as possible.
 Please observe that minimal attention has been given to styling. Design is 
 not my strong suit and styling was not part of the assignement.
 
+The assignement can be found in the assignement folder.
+
 ## To run the application
 
 Clone the repo. Run NPM install. Run npm start.
