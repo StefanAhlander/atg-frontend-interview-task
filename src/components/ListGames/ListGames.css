@@ -1,0 +1,43 @@
+.ListGames {
+  width: 100%;
+  max-width: 400px;
+  margin: 0.5rem auto;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 0;
+}
+
+.ListGames h3 {
+  background-color: lightblue;
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
+.ListGames p {
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.ListGames p:nth-child(odd) {
+  background-color: rgb(211, 233, 240);
+}
+
+.ListGames .gameItem {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 0.5rem 0;
+}
+
+.ListGames .gameItem:first-child {
+  margin-top: 0;
+  border-top: 0;
+}
+
+.ListGames .gameItem:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.ListGames div.gameItem.active {
+  border: 5px solid green;
+}

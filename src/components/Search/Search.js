@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import './Search.css';
 
-import Races from '../Races/Races';
-import Results from '../Results/Results';
-
 import { useFetch } from '../../hooks/useFetch';
+import ListGames from '../ListGames/ListGames';
 
 const Search = () => {
   let upcoming, results;
   const [searchValue, setSearchValue] = useState('V75');
+  const [selectedGame, setSelectedGame] = useState(null);
+
+  const handleSelectGame = gameId => {
+    setSelectedGame(gameId);
+  };
 
   const { response, error, isLoading } = useFetch(
     `https://www.atg.se/services/racinginfo/v1/api/products/${searchValue}`
@@ -19,8 +22,10 @@ const Search = () => {
     results = response.results;
   }
 
-  const handleChange = event =>
+  const handleChange = event => {
     setSearchValue(event.target.value);
+    setSelectedGame(null);
+  };
 
   return (
     <div className="Search">
@@ -45,9 +50,12 @@ const Search = () => {
 
       {isLoading && <h3>Loading...</h3>}
 
-      {upcoming && <Races gameId={upcoming[0]['id']} />}
-
-      {(!upcoming && results) && <Results gameId={results[0]['id']} />}
+      {(upcoming || results) && <ListGames
+        upcoming={upcoming}
+        results={results}
+        selectedGame={selectedGame}
+        handleSelectGame={handleSelectGame}
+      />}
 
       <div className="Error">
         {error && <h3>Something went wrong. Please try again.</h3>}
