@@ -1,5 +1,5 @@
 .Start {
-  wodth: 100%;
+  width: 100%;
   max-width: 400px;
   margin: 0.5rem auto;
   border: 2px solid black;
@@ -14,10 +14,15 @@
 }
 
 .Start p {
-  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.Start p:nth-child(odd) {
+  background-color: rgb(211, 233, 240);
 }
 
 .Start .arrow {
-  height: 2rem;
   float: right;
+  padding: 0.5rem;
 }

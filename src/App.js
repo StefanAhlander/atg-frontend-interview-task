@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import Race from './components/Race/Race';
+import Races from './components/Races/Races';
 
 function App() {
   return (
     <div className="App">
-      <Race></Race>
+      <Races></Races>
     </div>
   );
 }

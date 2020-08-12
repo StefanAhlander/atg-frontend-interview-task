@@ -34,10 +34,10 @@ const Start = ({
       </h3>
       <p className="driverName">Driver: {`${driverFirstName} ${driverLastName}`}</p>
       {expanded && (
-        <React.Fragment>
+        <>
           <p className="trainerName">Trainer: {`${trainerFirstName} ${trainerLastName}`}</p>
           <p className="horsesFather">Horses father: {fatherName}</p>
-        </React.Fragment>
+        </>
       )}
     </div>
   );
