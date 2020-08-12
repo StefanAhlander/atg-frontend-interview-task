@@ -1,20 +1,10 @@
-import gameSchedule from './gameSchedule.json';
-import gameData from './gameData.json';
+import { useState, useEffect } from 'react';
 
-export const useFetch = (uri) => {
-  if (/products/.test(uri)) {
-    return gameSchedule;
-  }
-  if (/games/.test(uri)) {
-    return gameData;
-  }
-};
-
-/* const useFetch = (url) => {
-  const [response, setResponse] = React.useState(null);
-  const [error, setError] = React.useState(null);
-  const [isLoading, setIsLoading] = React.useState(false);
-  React.useEffect(() => {
+export const useFetch = (url) => {
+  const [response, setResponse] = useState(null);
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
@@ -27,6 +17,6 @@ export const useFetch = (uri) => {
       }
     };
     fetchData();
-  }, []);
+  }, [url]);
   return { response, error, isLoading };
-}; */
+};

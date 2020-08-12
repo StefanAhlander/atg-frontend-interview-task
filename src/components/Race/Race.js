@@ -6,7 +6,7 @@ import Start from '../Start/Start';
 import { ReactComponent as DownArrow } from '../../img/down_arrow.svg';
 import { ReactComponent as UpArrow } from '../../img/up_arrow.svg';
 
-const Race = ({ number, date, name, scheduledStartTime, starts }) => {
+const Race = ({ number, name, scheduledStartTime, starts }) => {
   let [expanded, toggleExpanded] = useState(false);
 
   const handleToggle = () => {
@@ -16,7 +16,7 @@ const Race = ({ number, date, name, scheduledStartTime, starts }) => {
   return (
     <div className="Race">
       <header className="header">
-        <h2 className="raceNumber">{date} Race number: {number}</h2>
+        <h2 className="raceNumber">Race number: {number}</h2>
         <h3 className="raceName">{name}</h3>
       </header>
       <p>
